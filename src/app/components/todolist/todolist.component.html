@@ -1,0 +1,13 @@
+<h2>Todo List</h2>
+<input #todo placeholder="add work item" (keyup.enter)="addTodo(todo.value); todo.value = ''">
+<button (click)="addTodo(todo.value)">Add</button>
+
+<h3>Todos:</h3>
+<div *ngFor="let todo of todos; let i = index">
+    <ul>
+        <li>
+            {{ todo }}
+            <button (click)="removeTodo(i)">Remove</button>
+        </li>
+    </ul>
+</div>
