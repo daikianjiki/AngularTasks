@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { TodolistComponent } from './components/todolist/todolist.component';
 import { FormsModule } from '@angular/forms';
+import { FormvalidationsComponent } from './components/formvalidations/formvalidations.component';
+import { ProductlistwithsearchbarComponent } from './components/productlistwithsearchbar/productlistwithsearchbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
-    TodolistComponent
+    TodolistComponent,
+    FormvalidationsComponent,
+    ProductlistwithsearchbarComponent
   ],
   imports: [
     BrowserModule,

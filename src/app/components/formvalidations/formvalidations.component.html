@@ -1,0 +1,22 @@
+<h2>Validation Form</h2>
+<label for="name">Name: </label>
+<input type="text" [(ngModel)]="name">
+<br>
+<label for="email">Email: </label>
+<input type="email" [(ngModel)]="email" >
+<br>
+<label for="contact">Contact: </label>
+<input type="tel" [(ngModel)]="contact">
+<br>
+<label for="password">Passowrd: </label>
+<input type="password" [(ngModel)]="password">
+<br>
+<button [disabled]="!name || email.indexOf('@') === -1 || contact.length < 10 || password.length < 8" (click)="onSubmit()">Submit</button>
+
+<div *ngIf="isSubmitted">
+    <h3>Submitted Details:</h3>
+    <p>Name: {{ name }}</p>
+    <p>Email: {{ email }}</p>
+    <p>Contact: {{ contact }}</p>
+    <p>Password: {{ password }}</p>
+</div>

@@ -1,0 +1,19 @@
+<h2>Product List with Search Bar</h2>
+
+<input #product placeholder="Search for Product" (input)="searchFor(product.value)">
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let product of filteredProducts">
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price | currency }}</td>
+        </tr>
+    </tbody>
+</table>
+
