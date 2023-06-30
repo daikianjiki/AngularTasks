@@ -8,7 +8,7 @@
 <label for="contact">Contact: </label>
 <input type="tel" [(ngModel)]="contact">
 <br>
-<label for="password">Passowrd: </label>
+<label for="password">Password: </label>
 <input type="password" [(ngModel)]="password">
 <br>
 <button [disabled]="!name || email.indexOf('@') === -1 || contact.length < 10 || password.length < 8" (click)="onSubmit()">Submit</button>
