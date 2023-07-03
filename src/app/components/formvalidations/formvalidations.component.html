@@ -11,7 +11,7 @@
 <label for="password">Password: </label>
 <input type="password" [(ngModel)]="password">
 <br>
-<button [disabled]="!name || email.indexOf('@') === -1 || contact.length < 10 || password.length < 8" (click)="onSubmit()">Submit</button>
+<button [disabled]="!name || !email.includes('@') || contact.length < 10 || password.length < 8" (click)="onSubmit()">Submit</button>
 
 <div *ngIf="isSubmitted">
     <h3>Submitted Details:</h3>
